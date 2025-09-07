@@ -40,7 +40,7 @@ tello.streamoff()
 tello.end()
 ```
 ## Find red
-赤色を探すコードです。先程の統合化のコードよりTelloがスムーズに動かすことができます。
+赤色を探すコードです。先程の統合化のコードよりTelloをスムーズに動かすことができます。
 ### sample02.py
 ```python
 from djitellopy import Tello
