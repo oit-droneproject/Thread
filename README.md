@@ -110,4 +110,4 @@ tello.streamoff()
 tello.end()
 ```
 ## Trouble Shooting
-When multiple error codes appear in Tello's code, they may persist in the background. In such cases, press 'ctrl'+'shift'+'Esc' to terminate the operation.
+よくわからないエラーが頻発するときはプロセスが残っている場合があります。タスクマネージャ起動して('ctrl'+'shift'+'Esc')プロセスを終了させましょう。 
