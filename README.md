@@ -1,8 +1,7 @@
 # Thread
-Threads are an essential method for getting Tello to work properly.
-To clear the final challenge, you need to use threads. Let's learn about threads in Tello through simple examples!
+単に統合化しただけではうまくTelloが動かないときも多いです。そのためThreadをわけることでopnecvとTelloが動かせることもあります。
 ## Video and Move
-Tello can smoothly move while sending videos by splitting threads.
+スレッドをわけることで動画の再生をスムーズに行うことができます。
 ### sample01.py
 ```python
 from djitellopy import Tello
@@ -41,7 +40,7 @@ tello.streamoff()
 tello.end()
 ```
 ## Find red
-Let's confirm that using threads allows Tello to move smoothly.
+赤色を探すコードです。先程の統合化のコードよりTelloがスムーズに動かすことができます。
 ### sample02.py
 ```python
 from djitellopy import Tello
@@ -58,6 +57,7 @@ stop_event = threading.Event()
 state_event =threading.Event()
 def show_camera(end):
     while True:
+        time.sleep(0.2)
         frame = tello.get_frame_read().frame
         frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
         frame = cv2.resize(frame, (720, 480))
